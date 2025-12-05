@@ -5,9 +5,6 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/login', [Authcontroller::class, 'index'])->name('login');
 Route::post('/login', [Authcontroller::class, 'authenticate'])->name('login.authenticate');
